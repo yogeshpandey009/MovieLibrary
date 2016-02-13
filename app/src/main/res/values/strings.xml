@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Movies Description</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="title_activity_dialog">DialogActivity</string>
+    <string name="dialog_button">OK</string>
+    <string name="dialog_text">This is the Dialog Message</string>
+    <string name="genre_prompt">Choose a genre</string>
+    <string name="search_hint">Movies</string>
+    <string-array name="genre_arrays">
+        <item>Action</item>
+        <item>Thriller</item>
+        <item>Comedy</item>
+        <item>Sci-Fi</item>
+        <item>Romance</item>
+        <item>Drama</item>
+        <item>Horror</item>
+        <item>Mystery</item>
+    </string-array>
+</resources>

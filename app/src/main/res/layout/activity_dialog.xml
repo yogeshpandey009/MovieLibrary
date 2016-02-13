@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="300dp"
+                android:layout_height="500dp"
+                android:background="@color/dark_red"
+                android:padding="12dip"
+                tools:context="edu.asu.msse.ypandey.labassign3.DialogActivity">
+    <!--
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/dialog_textview"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_text"
+        android:gravity="center_horizontal"
+        android:textColor="@color/light_yellow"
+        android:paddingBottom="12dip"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_below="@id/dialog_textview"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+    -->
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:onClick="finishDialog"
+        android:id="@+id/btn_back" android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true" android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:layout_alignParentTop="true"
+        android:layout_above="@+id/btn_back"
+        android:layout_toStartOf="@+id/btn_rem" android:id="@+id/linearLayout"
+        android:layout_toLeftOf="@+id/btn_rem">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Title:"
+            android:id="@+id/textView"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Rated:"
+            android:id="@+id/textView3"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Released:"
+            android:id="@+id/textView4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Genre:"
+            android:id="@+id/textView6"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Actors:"
+            android:id="@+id/textView7"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Plot:"
+            android:id="@+id/textView8"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:layout_alignTop="@+id/linearLayout"
+        android:layout_above="@+id/btn_back"
+        android:layout_alignParentRight="true" android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/linearLayout" android:layout_toEndOf="@+id/linearLayout">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/titleText"
+            />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/ratedText"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/releasedText"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <Spinner
+            android:id="@+id/genreSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:entries="@array/genre_arrays"
+            android:prompt="@string/genre_prompt" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/actorsText"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/plotText"
+            />
+    </LinearLayout>
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/btn_save"
+        android:onClick="saveMovie"
+        android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        android:onClick="removeMovie"
+        android:id="@+id/btn_rem"
+        android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+</RelativeLayout>
